@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HandSync - Hand Gesture Music Player</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- โหลด MediaPipe Libraries ครบถ้วนผ่าน CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <h1> HandSync Music Player</h1>
+  
+  <div class="container">
+    <video id="webcam" autoplay playsinline></video>
+    <canvas id="output_canvas" width="640" height="480"></canvas>
+  </div>
+
+  <div id="status-card">
+    <div>วงที่ตรวจพบ:</div>
+    <div id="band-display" class="band-name">กำลังรอสัญลักษณ์มือ...</div>
+    <div id="song-display"> -</div>
+  </div>
+
+  <!-- โหลดสคริปต์หลัก -->
+  <script src="script.js"></script>
+</body>
+</html>
